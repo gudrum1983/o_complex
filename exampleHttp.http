@@ -1,0 +1,5 @@
+### GET request to example server
+GET http://o-complex.com:1337/reviews
+
+###
+
