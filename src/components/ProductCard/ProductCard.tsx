@@ -9,7 +9,8 @@ interface Product {
   title: string;
   description: string;
   price: number;
-  totalPrice: number;
+  totalPrice?: number;
+  count?: number;
 }
 
 

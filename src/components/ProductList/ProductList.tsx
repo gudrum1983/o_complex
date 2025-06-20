@@ -4,7 +4,6 @@ import {useCallback, useEffect, useRef, useState} from "react";
 import {Product, ProductRequest} from "@/types";
 import ProductCard from "@/components/ProductCard/ProductCard";
 import styles from "./ProductList.module.css";
-import {useCart} from "@/components/CartProvider/context";
 
 export default function ProductListClient({
                                             initialItems,
@@ -16,7 +15,8 @@ export default function ProductListClient({
   const [products, setProducts] = useState(initialItems);
   const [total] = useState(initialTotal);
   const [page, setPage] = useState(2);
-  // --- Защита ---
+
+
   const loadingRef = useRef(false);
   const loadedPages = useRef<Set<number>>(new Set([1]));
 

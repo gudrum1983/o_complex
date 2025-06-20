@@ -13,7 +13,7 @@ export interface ProductRequest {
   items: Product[]
 }
 
-export type CartItem = Pick<Product, "title" | "price" | "id"> & {count: number, totalPrice: number};
+export type CartItem = Pick<Product, "title" | "price" | "id"> & {count?: number, totalPrice?: number};
 
 
 // Тип контекста

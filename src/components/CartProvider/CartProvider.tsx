@@ -47,9 +47,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setItems((prev) =>
       prev
         .map((item) =>
-          item.id === id ? { ...item, count: item.count - 1 } : item
+          item.id === id ? { ...item, count: (item.count ?? 0) - 1 } : item
         )
-        .filter((item) => item.count > 0)
+        .filter((item) => (item.count ?? 0) > 0)
     );
   };
 

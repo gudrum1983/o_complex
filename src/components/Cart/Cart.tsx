@@ -51,7 +51,7 @@ export default function Cart() {
         setMessage(data.error || "Произошла ошибка при отправке заказа.");
       }
     } catch (err) {
-      setMessage("Ошибка сети или сервера.");
+      setMessage(`Ошибка сети или сервера. ${err}`);
     }
   };
 
@@ -67,8 +67,8 @@ export default function Cart() {
         {items.map(item => (
           <li key={item.id}>
             <div className={styles.name}>{item.title}</div>
-            <div className={styles.count}>x{item.count}</div>
-            <div className={styles.price}>{item.price * item.count} ₽</div>
+            <div className={styles.count}>x{item.count ?? 0}</div>
+            <div className={styles.price}>{item.price * (item.count ?? 0)} ₽</div>
           </li>
         ))}
       </ul></>}
