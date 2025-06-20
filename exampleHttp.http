@@ -3,3 +3,11 @@ GET http://o-complex.com:1337/reviews
 
 ###
 
+
+### GET request to example server
+GET http://o-complex.com:1337/products?page=1&page_size=6
+
+###
+
+
+

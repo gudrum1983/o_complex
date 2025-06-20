@@ -2,6 +2,7 @@ import styles from "./Cart.module.css";
 import React from "react";
 import Form from "next/form";
 import PhoneInput from "@/components/PhoneInput/PhoneInput";
+
 export default function Cart() {
 
   return (
@@ -19,10 +20,11 @@ export default function Cart() {
           <div>364546 ₽</div>
         </li>
       </ul>
-      <Form  action="">
+      <Form action="">
         <div className={styles.action}>
           <PhoneInput/>
-        <button className={styles.button} type="submit">заказать</button></div>
+          <button className={styles.button} type="submit">заказать</button>
+        </div>
       </Form>
 
 
