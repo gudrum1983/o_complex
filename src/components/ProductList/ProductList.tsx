@@ -16,7 +16,6 @@ export default function ProductListClient({
   const [products, setProducts] = useState(initialItems);
   const [total] = useState(initialTotal);
   const [page, setPage] = useState(2);
-  const { items, addItem, removeItem, phone, setPhone } = useCart();
   // --- Защита ---
   const loadingRef = useRef(false);
   const loadedPages = useRef<Set<number>>(new Set([1]));
