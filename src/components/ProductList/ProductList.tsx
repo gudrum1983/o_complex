@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import {useCallback, useEffect, useRef, useState} from "react";
 import {Product, ProductRequest} from "@/types";
 import ProductCard from "@/components/ProductCard/ProductCard";
 import styles from "./ProductList.module.css";
@@ -20,7 +20,7 @@ export default function ProductListClient({
   const loadingRef = useRef(false);
   const loadedPages = useRef<Set<number>>(new Set([1]));
 
-  const loadMore = async () => {
+  const loadMore = useCallback(async () => {
     if (loadingRef.current || products.length >= total || loadedPages.current.has(page)) return;
 
     loadingRef.current = true;
@@ -42,7 +42,7 @@ export default function ProductListClient({
     } finally {
       loadingRef.current = false;
     }
-  };
+  }, [page, products.length, total]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +52,7 @@ export default function ProductListClient({
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [products.length, total]);
+  }, [products.length, total, loadMore]);
 
   return (
     <>
