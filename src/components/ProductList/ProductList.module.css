@@ -1,0 +1,10 @@
+.ProductList {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 983px;
+  margin: 0 auto 20px;
+  justify-content: center;
+}

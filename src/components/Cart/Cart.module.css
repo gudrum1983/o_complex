@@ -1,0 +1,114 @@
+.Cart {
+  width: 100%;
+  max-width: 708px;
+  height: fit-content;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+
+
+  border-radius: 15px;
+  background: #D9D9D9;
+  padding: 10px;
+  margin-bottom: 47px;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  box-sizing: border-box;
+
+  h3 {
+    color: #000;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 11px;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 9px;
+
+
+    li {
+      display: flex;
+      color: #000;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      gap: 10px;
+      align-items: center;
+
+      .name {
+        width: 100%;
+        max-width: 198px
+      }
+
+      .count {
+        width: 100%;
+        max-width: 55px
+      }
+
+      .price {
+        width: 100%;
+        max-width: 100px
+      }
+
+
+
+    }
+  }
+
+  .action {
+    padding-top: 20px;
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+  }
+
+
+
+
+  .button {
+    width: 268px;
+    height: 68px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #222;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: #F0F0F0;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+
+  .action {
+justify-content: center;
+  }
+
+
+  .Cart {
+    align-items: center;
+
+    .button {
+      width: 100%;
+    }
+
+  }
+
+
+
+
+}

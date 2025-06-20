@@ -1,0 +1,8 @@
+.ReviewsList {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  margin-bottom: 243px;
+  flex-wrap: wrap;
+}

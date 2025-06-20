@@ -1,0 +1,24 @@
+.Header {
+  width: 100%;
+  margin-bottom: 105px;
+  margin-top: 55px;
+  display: flex;
+  height: 132px;
+  border-radius: 15px;
+  background: #777;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    color: #F0F0F0;
+    font-size: clamp(40px, 10vw, 96px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}

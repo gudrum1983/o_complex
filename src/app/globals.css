@@ -1,13 +1,9 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #222;
+  --background-header: #777;
+  --background-card: #D9D9D9;
+  --color-text-accent: #F0F0F0;
+  --color-text-card: #000;
 }
 
 html,
@@ -17,11 +13,12 @@ body {
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Inter, serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
@@ -35,8 +32,11 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a, button {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+a, button:hover {
+  opacity: 0.9;
 }
