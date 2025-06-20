@@ -1,6 +1,6 @@
 .PhoneInput {
-
-  width: 401px;
+width: 100%;
+  max-width: 401px;
   height: 68px;
   flex-shrink: 0;
   border-radius: 15px;
@@ -13,4 +13,18 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.error {
+  border: 2px solid #B92020;
+  color: #B92020;
+}
+
+@media screen and (max-width: 750px) {
+
+  .PhoneInput {
+    padding: 12px 12px;
+    max-width: 100%;
+  }
+
 }

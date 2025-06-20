@@ -4,6 +4,7 @@ import ReviewsList from "@/components/ReviewsList/ReviewsList";
 import Cart from "@/components/Cart/Cart";
 import ProductList from "@/components/ProductList/ProductList";
 import {Product} from "@/types";
+import {CartProvider} from "@/components/CartProvider/CartProvider";
 
 async function getProducts(): Promise<{ items: Product[], total: number }> {
   const res = await fetch('http://o-complex.com:1337/products?page=1&page_size=6', {
@@ -17,7 +18,7 @@ async function getProducts(): Promise<{ items: Product[], total: number }> {
 }
 
 export default async function Home() {
-  const { items, total } = await getProducts();
+  const {items, total} = await getProducts();
 
   return (
     <div className={styles.page}>
@@ -25,13 +26,14 @@ export default async function Home() {
       <main className={styles.main}>
 
         <ReviewsList/>
-        <Cart/>
-        <ProductList initialItems={items} initialTotal={total}/>
+        <CartProvider>
+          <Cart/>
+          <ProductList initialItems={items} initialTotal={total}/>
+          <div id="popup-root" />
+        </CartProvider>
+
       </main>
 
-      <footer className={styles.footer}>
-
-      </footer>
     </div>
   );
 }

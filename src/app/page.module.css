@@ -9,7 +9,8 @@
 
   display: flex;
   flex-direction: column;
-  max-width: 1442px;
+  max-width: calc(1442px + 28px);
+  padding-inline: 14px ;
   width: 100%;
 
   min-height: 100svh;

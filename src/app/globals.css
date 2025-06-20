@@ -31,3 +31,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+a, button {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+a, button:hover {
+  opacity: 0.9;
+}
